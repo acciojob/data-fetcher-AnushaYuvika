@@ -12,16 +12,16 @@ const App = () => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
+        return response.json(); 
       })
       .then((result) => {
-        setTimeout(() => { 
+        setTimeout(() => {
           setData(result);
           setLoading(false);
-        }, 2000);
+        }, 2000); 
       })
       .catch((error) => {
-        setError(err.message);
+        setError(error.message); 
         setLoading(false);
       });
   }, []);
